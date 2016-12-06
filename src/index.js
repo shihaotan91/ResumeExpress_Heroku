@@ -146,6 +146,12 @@ class LoginWrapper extends React.Component {
         }
       }
 
+      class ResumeWrapper extends React.Component {
+
+      }
+
+
+
       const Root = () => {
         return (
           <HashRouter>
@@ -159,7 +165,7 @@ class LoginWrapper extends React.Component {
 
           <Match exactly pattern='/:username/resumelist' component={ResumeList}/>
 
-          <Match pattern='/updateResume' component={UpdateResume}/>
+          <Match pattern='/updateResume/:index' component={UpdateResume}/>
 
           <Miss component={NotFound} />
 

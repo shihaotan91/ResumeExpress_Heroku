@@ -11,6 +11,7 @@ class ResumeList extends React.Component {
     this.state = {
       resumes: {}
     }
+    this.updateResume = this.updateResume.bind(this)
   }
 
   componentWillMount(){

@@ -12,7 +12,7 @@ class MyResume extends React.Component {
   }
 
   goToUpdateResume() {
-  this.context.router.transitionTo(`/updateResume`  )
+  this.context.router.transitionTo(`${this.props.index}`  )
   }
 
   render() {
