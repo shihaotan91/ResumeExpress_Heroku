@@ -146,7 +146,39 @@ class LoginWrapper extends React.Component {
         }
       }
 
-      class ResumeWrapper extends React.Component {
+      class UpdateResumeWrapper extends React.Component {
+        constructor() {
+          super()
+
+          this.state = {
+            resumes: {}
+          }
+        }
+
+        componentWillMount(){
+           this.ref = base.syncState(`${this.props.params.username}/programmer`
+           , {
+             context: this,
+             state: 'resumes'
+           })
+        };
+
+        componentWillUnmount() {
+          base.removeBinding(this.ref)
+        }
+
+        updateResumeToState(resumes){
+          this.setState({resumes})
+        }
+
+        render() {
+          return (
+            <Programmer
+            resumes={this.state.resumes}
+            addResumeToState={this.addResumeToState}
+            />
+          );
+        }
 
       }
 
