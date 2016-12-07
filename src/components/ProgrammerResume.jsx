@@ -62,7 +62,7 @@ class ProgrammerResume extends React.Component {
           <p className="programmerEduDate1">{details.edudate1}</p>
           <p className="programmerEduDesc1">{details.edudesc1}</p>
 
-          <h5 className="programmerEduSchool2">{details.eduschool2}</h5>
+          <h4 className="programmerEduSchool2">{details.eduschool2}</h4>
           <p className="programmerEduDate2">{details.edudate2}</p>
           <p className="programmerEduDesc2">{details.edudesc2}</p>
 
@@ -77,6 +77,24 @@ class ProgrammerResume extends React.Component {
           <h6 className="programmerProjectName3">{details.projectname3}</h6>
           <p className="programmerProjectDesc3">{details.projectdesc3}</p>
           <p className="programmerProjectLink3">{details.projectlink3}</p>
+
+          <img className="logo1" src={details.logo1}/>
+          <img className="logo2" src={details.logo2}/>
+          <img className="logo3" src={details.logo3}/>
+          <img className="logo4" src={details.logo4}/>
+          <img className="logo5" src={details.logo5}/>
+          <img className="logo6" src={details.logo6}/>
+          <img className="logo7" src={details.logo7}/>
+          <img className="logo8" src={details.logo8}/>
+          <img className="logo9" src={details.logo9}/>
+
+          <h6 className="programmerHobbyName1">{details.hobbyname1}</h6>
+          <p className="programmerHobbyDesc1">{details.hobbydesc1}</p>
+
+          <h6 className="programmerHobbyName2">{details.hobbyname2}</h6>
+          <p className="programmerHobbyDesc2">{details.hobbydesc2}</p>
+
+
         </div>
 
         <Buttons/>

@@ -5,7 +5,7 @@
 }
 
 #resumeTemplate {
-  background-image: url("http://i.imgur.com/hxC2CjN.jpg");
+  background-image: url("http://i.imgur.com/5Ua8MZ0.png");
   background-size: cover;
   height: 842px;
   width: 595px;
@@ -17,6 +17,7 @@
   text-align: center;
   text-decoration: underline;
   width: 432px;
+  height: 70px;
   padding-top: 10px;
   line-height: 20px;
   display: inline-block;
@@ -25,6 +26,7 @@
 .programmerTitle {
   text-align: center;
   width: 432px;
+  height: 10px;
   font-style: italic;
   display: inline-block;
 }
@@ -33,52 +35,59 @@
   text-align: center;
   margin-left: 90px;
   width: 250px;
-  height: 100px;
-  padding-top: 15px;
+  height: 80px;
+  padding-top: 30px;
   word-wrap: break-word;
   display: inline-block;
 }
 
 .programmerMobile {
  margin-left: 480px;
- margin-top: -165px;
+ margin-top: -125px;
  font-size: 13px;
+ height: 10px;
 }
 
 .programmerEmail {
  margin-left: 480px;
- margin-top: 16px;
- font-size: 13px;
+ margin-top: 25px;
+ font-size: 9px;
+ height: 10px;
 }
 
 .programmerLinkedin {
  margin-left: 480px;
- margin-top: 13px;
- font-size: 13px;
+ margin-top: 25px;
+ font-size: 9px;
+ height: 10px;
 }
 
 .programmerWebsite {
  margin-left: 480px;
- margin-top: 18px;
- font-size: 13px;
+ margin-top: 25px;
+ font-size: 9px;
+ height: 10px;
 }
 
 .programmerGithub {
  margin-left: 480px;
- margin-top: 18px;
- font-size: 13px;
+ margin-top: 25px;
+ font-size: 9px;
+ height: 10px;
 }
 
 .programmerJobTitle1 {
-  margin-top: 30px;
+  margin-top: 45px;
   margin-left: 26px;
   display: inline-block;
+  height: 10px;
 }
 
 .programmerJobDate1 {
   display: inline-block;
   margin-left: 13px;
   font-size: 12px;
+  height: 5px;
 }
 
 .programmerJobDesc1 {
@@ -93,12 +102,14 @@
   margin-top: 10px;
   margin-left: 26px;
   display: inline-block;
+  height: 10px;
 }
 
 .programmerJobDate2 {
   display: inline-block;
   margin-left: 13px;
   font-size: 12px;
+  height: 5px;
 }
 
 .programmerJobDesc2 {
@@ -110,15 +121,17 @@
 }
 
 .programmerEduSchool1 {
-  margin-top: 22px;
+  margin-top: 55px;
   margin-left: 26px;
   display: inline-block;
+  height: 10px;
 }
 
 .programmerEduDate1 {
   display: inline-block;
   margin-left: 13px;
   font-size: 12px;
+  height: 5px;
 }
 
 .programmerEduDesc1 {
@@ -130,15 +143,17 @@
 }
 
 .programmerEduSchool2 {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 26px;
   display: inline-block;
+  height: 10px;
 }
 
 .programmerEduDate2 {
   display: inline-block;
   margin-left: 13px;
   font-size: 12px;
+  height: 5px;
 }
 
 .programmerEduDesc2 {
@@ -153,6 +168,7 @@
   display: inline-block;
   margin-left: 450px;
   margin-top: -480px;
+  height: 10px;
 }
 
 .programmerProjectDesc1 {
@@ -170,11 +186,13 @@
   text-decoration: underline;
   color: rgb(169, 152, 201);
   font-size: 12px;
+  height: 10px;
 }
 
 .programmerProjectName2 {
   margin-left: 450px;
-  margin-top: 30px;
+  margin-top: 50px;
+  height: 10px;
 }
 
 .programmerProjectDesc2 {
@@ -191,11 +209,13 @@
   text-decoration: underline;
   color: rgb(169, 152, 201);
   font-size: 12px;
+  height: 10px;
 }
 
 .programmerProjectName3 {
   margin-left: 450px;
-  margin-top: 30px;
+  margin-top: 50px;
+  height: 10px;
 }
 
 .programmerProjectDesc3 {
@@ -212,4 +232,134 @@
   text-decoration: underline;
   color: rgb(169, 152, 201);
   font-size: 12px;
+  height: 10px;
+}
+
+.programmerHobbyName1 {
+  margin-left: 450px;
+  margin-top: 60px;
+  height: 10px;
+}
+
+.programmerHobbyDesc1 {
+  margin-left: 450px;
+  font-size: 10px;
+  height: 40px;
+  word-wrap: break-word;
+  width: 130px;
+}
+
+.programmerHobbyName2 {
+  margin-left: 450px;
+  height: 10px;
+}
+
+.programmerHobbyDesc2 {
+  margin-left: 450px;
+  font-size: 10px;
+  height: 40px;
+  word-wrap: break-word;
+  width: 130px;
+}
+
+.logo1 {
+  margin-top: 130px;
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  float: left;
+  display: inline-block;;
+}
+
+.logo2 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo3 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo4 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo5 {
+  margin-top: 118px;
+  margin-left: 3px;
+  width: 50px;
+  height: 70px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo6 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo7 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo8 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+.logo9 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+#resumeTemplate img[src=""] {
+  display:none;
 }
