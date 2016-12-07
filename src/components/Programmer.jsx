@@ -25,7 +25,8 @@ class Programmer extends React.Component {
   }
 
   render() {
-    console.log(this.props.resumes)
+    console.log('hello world')
+    // console.log(this.props.params.username)
     return (
       <div>
         <ProgrammerForm

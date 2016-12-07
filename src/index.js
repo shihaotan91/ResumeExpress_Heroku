@@ -73,7 +73,7 @@ class LoginWrapper extends React.Component {
       this.setState ({
         uid: username
       })
-      this.context.router.transitionTo(`/${username}`)
+      // this.context.router.transitionTo(`/${username}`)
     }
 
     logout() {
@@ -156,7 +156,7 @@ class LoginWrapper extends React.Component {
         }
 
         componentWillMount(){
-           this.ref = base.syncState(`${this.props.params.username}/programmer`
+          this.ref = base.syncState(`${this.props.params.username}/programmer`
            , {
              context: this,
              state: 'resumes'

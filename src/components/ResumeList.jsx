@@ -3,6 +3,8 @@ import base from '../base'
 
 import MyResume from './MyResume.jsx'
 
+import '../css/ResumeList.css';
+
 class ResumeList extends React.Component {
 
   constructor() {
@@ -12,6 +14,7 @@ class ResumeList extends React.Component {
       resumes: {}
     }
     this.updateResume = this.updateResume.bind(this)
+    this.removeResume = this.removeResume.bind(this)
   }
 
   componentWillMount(){
@@ -28,6 +31,13 @@ class ResumeList extends React.Component {
     this.setState({resumes})
   }
 
+  removeResume(key) {
+  console.log("hello world")
+  const resumes = {...this.state.resumes}
+  resumes[key] = null
+  this.setState({ resumes })
+}
+
   render() {
 
     var db = base.database()
@@ -42,10 +52,13 @@ class ResumeList extends React.Component {
     console.log("hello world")
     return (
       <div>
+      <h1 className="resumeHeading">Your Resumes</h1>
         <ul>
           {
             Object.keys(this.state.resumes)
-            .map(key => <MyResume key={key} index={key} details={this.state.resumes[key]}/>)
+            .map(key => <MyResume key={key} index={key} details={this.state.resumes[key]}
+            removeResume={this.removeResume}
+            resumes={this.state.resumes} />)
           }
         </ul>
       </div>

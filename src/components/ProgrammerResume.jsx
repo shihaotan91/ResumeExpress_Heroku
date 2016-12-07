@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/ProgrammerResume.css';
 
+import Buttons from './Buttons.jsx'
+
 // import {xepOnline, Formatter} from 'css-to-pdf'
 import $ from 'jquery'
 
@@ -28,6 +30,8 @@ class ProgrammerResume extends React.Component {
   // }
 
   render() {
+
+    // console.log("hello world")
     // const click="return xepOnline.Formatter.Format('Resume', {render:'download'})";
     // document.getElementById('buttons').append('<button onclick="'+ click +'">PDF</button>');
     // <button onClick={click}>Click this</button>
@@ -75,7 +79,7 @@ class ProgrammerResume extends React.Component {
           <p className="programmerProjectLink3">{details.projectlink3}</p>
         </div>
 
-
+        <Buttons/>
 
       </div>
     )

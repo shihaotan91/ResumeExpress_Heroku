@@ -18,12 +18,11 @@ class MyResume extends React.Component {
   render() {
     const {details, index} = this.props;
     return (
-      <div>
-        <li>
-          <button onClick={this.goToUpdateResume}>{this.props.index}
+      <div className="resumeArray">
           <img className="resumelogo" src="http://i.imgur.com/2UbRO47.png"/>
-          </button>
-        </li>
+          <p>Index: {this.props.index}</p>
+          <p>Resume Name: {details.resumename}</p>
+          <button onClick={() => this.props.removeResume(this.props.index)}>Delete Resume</button>
       </div>
     )
   }

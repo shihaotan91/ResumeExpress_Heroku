@@ -1,0 +1,15 @@
+.backHome {
+  position: fixed;
+  left: 120px;
+  top: 550px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background-color:rgb(85, 180, 33);
+  border: 0px;
+  opacity: 0.4
+}
+
+.backHome:hover {
+  opacity: 1
+}

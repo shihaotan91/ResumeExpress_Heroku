@@ -5,7 +5,7 @@ class ResumeList extends React.Component {
 
   render() {
     return (
-      <h1>Hello world</h1>
+      <h1></h1>
     )
   }
 }

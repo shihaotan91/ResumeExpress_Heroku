@@ -41,14 +41,15 @@ class ProgrammerForm extends React.Component {
 
     this.createResume = this.createResume.bind(this)
     // this.handleChange = this.handleChange.bind(this)
-    this.handleResumeInput = this.handleResumeInput.bind(this)
+    // this.handleResumeInput = this.handleResumeInput.bind(this)
   }
 
   createResume(event) {
     event.preventDefault();
-    console.log("test create resume")
+    // console.log("test create resume")
 
     const resume = {
+      resumename: this.resumename.value,
       name: this.name.value,
       title: this.title.value,
       pitch: this.pitch.value,
@@ -96,13 +97,13 @@ class ProgrammerForm extends React.Component {
  //   this.props.updateResume(key, updatedResume);
  // }
 
-  handleResumeInput(e) {
-    this.setState({
-      resumeInputName: e.target.value,
-      resumeInputJob1: e.target.value,
-      resumeInputJob2: e.target.value,
-    })
-  }
+  // handleResumeInput(e) {
+  //   this.setState({
+  //     resumeInputName: e.target.value,
+  //     resumeInputJob1: e.target.value,
+  //     resumeInputJob2: e.target.value,
+  //   })
+  // }
 
   render(key) {
     const resume = this.props.resumes[key]
@@ -114,6 +115,9 @@ class ProgrammerForm extends React.Component {
             ref={(input) => this.programmerForm = input} className="programmer-form"
             onChange={this.handleChange}
             onSubmit={(e) => this.createResume(e)}>
+
+            <input ref={(input) => this.resumename = input}
+            type="text" placeholder="Title of your resume"/>
 
             <input ref={(input) => this.name = input}
             onChange={this.handleChange.bind(this, 'resumeInputName')}
