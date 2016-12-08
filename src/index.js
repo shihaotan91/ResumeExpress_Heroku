@@ -11,6 +11,8 @@ import Programmer from './components/Programmer.jsx'
 import NotFound from './components/NotFound.jsx'
 import ResumeList from './components/ResumeList.jsx'
 import UpdateResume from './components/UpdateResume.jsx'
+import Construct from './components/Construct.jsx'
+
 //
 class LoginWrapper extends React.Component {
 
@@ -191,13 +193,15 @@ class LoginWrapper extends React.Component {
 
           <Match exactly pattern='/' component={LoginWrapper}/>
 
-          <Match pattern='/:username/programmer' component={ResumeWrapper} />
+          <Match exactly pattern='/:username/programmer' component={ResumeWrapper} />
 
           <Match exactly pattern='/:username' component={Home}/>
 
           <Match exactly pattern='/:username/resumelist' component={ResumeList}/>
 
-          <Match pattern='/updateResume/:index' component={UpdateResume}/>
+          <Match exactly pattern='/updateResume/:index' component={UpdateResume}/>
+
+          <Match pattern='/:username/construct' component={Construct}/>
 
           <Miss component={NotFound} />
 

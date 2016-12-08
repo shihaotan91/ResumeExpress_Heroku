@@ -5,12 +5,12 @@
 }
 
 #resumeTemplate {
-  background-image: url("http://i.imgur.com/5Ua8MZ0.png");
+  background-image: url("http://i.imgur.com/17S7jVJ.png");
   background-size: cover;
   height: 842px;
   width: 595px;
   margin-left: 100px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .programmerName {
@@ -42,37 +42,37 @@
 }
 
 .programmerMobile {
- margin-left: 480px;
- margin-top: -125px;
- font-size: 13px;
+ margin-left: 465px;
+ margin-top: -135px;
+ font-size: 10px;
  height: 10px;
 }
 
 .programmerEmail {
- margin-left: 480px;
- margin-top: 25px;
- font-size: 9px;
+ margin-left: 465px;
+ margin-top: 30px;
+ font-size: 10px;
  height: 10px;
 }
 
 .programmerLinkedin {
- margin-left: 480px;
- margin-top: 25px;
- font-size: 9px;
+ margin-left: 465px;
+ margin-top: 28px;
+ font-size: 10px;
  height: 10px;
 }
 
 .programmerWebsite {
- margin-left: 480px;
- margin-top: 25px;
- font-size: 9px;
+ margin-left: 465px;
+ margin-top: 28px;
+ font-size: 10px;
  height: 10px;
 }
 
 .programmerGithub {
- margin-left: 480px;
- margin-top: 25px;
- font-size: 9px;
+ margin-left: 465px;
+ margin-top: 28px;
+ font-size: 10px;
  height: 10px;
 }
 
@@ -307,10 +307,10 @@
 }
 
 .logo5 {
-  margin-top: 118px;
+  margin-top: 120px;
   margin-left: 3px;
   width: 50px;
-  height: 70px;
+  height: 60px;
   border: 0px;
   border-color: white;
   display: inline-block;
@@ -349,6 +349,7 @@
   display: inline-block;
   float: left;
 }
+
 .logo9 {
   margin-top: 130px;
   margin-left: 3px;
@@ -358,6 +359,80 @@
   border-color: white;
   display: inline-block;
   float: left;
+}
+
+.logo10 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo11 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo12 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo13 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.logo14 {
+  margin-top: 130px;
+  margin-left: 3px;
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  border-color: white;
+  display: inline-block;
+  float: left;
+}
+
+.printButton {
+  margin-top: 20px;
+  margin-left: 100px;
+  background-color: orange;
+  border-radius: 10px;
+  border: none;
+  width: 120px;
+  height: 40px;
+}
+
+.homeButton {
+  background-color: orange;
+  border: 0px;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
 }
 
 #resumeTemplate img[src=""] {

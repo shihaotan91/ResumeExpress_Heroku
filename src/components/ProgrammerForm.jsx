@@ -3,6 +3,8 @@ import '../css/ProgrammerForm.css';
 
 import ProgrammerResume from './ProgrammerResume.jsx'
 
+import $ from 'jquery'
+
 class ProgrammerForm extends React.Component {
   constructor() {
     super()
@@ -46,6 +48,11 @@ class ProgrammerForm extends React.Component {
       resumeInputLogo7: '',
       resumeInputLogo8: '',
       resumeInputLogo9: '',
+      resumeInputLogo10: '',
+      resumeInputLogo11: '',
+      resumeInputLogo12: '',
+      resumeInputLogo13: '',
+      resumeInputLogo14: '',
       resumeInputHobbyName1: '',
       resumeInputHobbyDesc1: '',
       resumeInputHobbyName2: '',
@@ -101,6 +108,11 @@ class ProgrammerForm extends React.Component {
       logo7: this.logo7.value,
       logo8: this.logo8.value,
       logo9: this.logo9.value,
+      logo10: this.logo5.value,
+      logo11: this.logo6.value,
+      logo12: this.logo7.value,
+      logo13: this.logo8.value,
+      logo14: this.logo9.value,
       hobbyname1: this.hobbyname1.value,
       hobbydesc1: this.hobbydesc1.value,
       hobbyname2: this.hobbyname2.value,
@@ -131,6 +143,22 @@ class ProgrammerForm extends React.Component {
   // }
 
   render(key) {
+
+      $('input[type=checkbox]').click(function(){
+        if (this.checked) {
+          this.value = this.value
+        } else {
+          this.value = null;
+        }
+      });
+
+        $('input[type=checkbox]').on('click', function(evt) {
+        if($(this).siblings(':checked').length >= 8) {
+          this.checked = false;
+          this.value = null;
+        }
+      });
+
     const resume = this.props.resumes[key]
     return (
       <div>
@@ -142,14 +170,18 @@ class ProgrammerForm extends React.Component {
             onSubmit={(e) => this.createResume(e)}>
 
             <input ref={(input) => this.resumename = input}
-            type="text" placeholder="Title of your resume"/>
+            type="text" placeholder="Title of your resume. For reference."/>
+
+            <br/>
 
             <input ref={(input) => this.name = input}
+            className="short"
             maxLength={18}
             onChange={this.handleChange.bind(this, 'resumeInputName')}
             type="text" placeholder="Your Name"/>
 
             <input ref={(input) => this.title = input}
+            className="short"
             maxLength={40}
             onChange={this.handleChange.bind(this, 'resumeInputTitle')}
             type="text" placeholder="Your Title"/>
@@ -161,155 +193,182 @@ class ProgrammerForm extends React.Component {
 
             <input ref={(input) => this.mobile = input}
             maxLength={14}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputMobile')}
             type="string" placeholder="Your Mobile"/>
 
             <input ref={(input) => this.email = input}
             maxLength={22}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputEmail')}
             type="text" placeholder="Your Email"/>
 
             <input ref={(input) => this.linkedin = input}
             maxLength={22}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputLinkedin')}
             type="text" placeholder="Your Linkedin"/>
 
             <input ref={(input) => this.website = input}
             maxLength={22}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputWebsite')}
             type="text" placeholder="Your Website"/>
 
             <input ref={(input) => this.github = input}
             maxLength={22}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputGithub')}
             type="text" placeholder="Your Github"/>
 
+            <br/>
+
             <input ref={(input) => this.jobtitle1 = input}
             maxLength={25}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputJobTitle1')}
-            type="text" placeholder="Your First Job Title"/>
+            type="text" placeholder="First Job Title"/>
 
             <input ref={(input) => this.jobdate1 = input}
             maxLength={15}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputJobDate1')}
-            type="text" placeholder="Your First Job Date"/>
+            type="text" placeholder="First Job Date"/>
 
             <textarea ref={(input) => this.jobdesc1 = input}
             maxLength={200}
             onChange={this.handleChange.bind(this, 'resumeInputJobDesc1')}
-            type="text" placeholder="Your First Job Description"/>
+            type="text" placeholder="First Job Description"/>
 
             <input ref={(input) => this.jobtitle2 = input}
             maxLength={25}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputJobTitle2')}
-            type="text" placeholder="Your Second Job Title"/>
+            type="text" placeholder="Second Job Title"/>
 
             <input ref={(input) => this.jobdate2 = input}
             maxLength={15}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputJobDate2')}
-            type="text" placeholder="Your Second Job Date"/>
+            type="text" placeholder="Second Job Date"/>
 
             <textarea ref={(input) => this.jobdesc2 = input}
             maxLength={220}
             onChange={this.handleChange.bind(this, 'resumeInputJobDesc2')}
-            type="text" placeholder="Your Second Job Description"/>
+            type="text" placeholder="Second Job Description"/>
 
             <input ref={(input) => this.eduschool1 = input}
             maxLength={25}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputEduSchool1')}
-            type="text" placeholder="Your First Education School"/>
+            type="text" placeholder="First School"/>
 
             <input ref={(input) => this.edudate1 = input}
             maxLength={15}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputEduDate1')}
-            type="text" placeholder="Your First Education Date"/>
+            type="text" placeholder="First School Date"/>
 
             <textarea ref={(input) => this.edudesc1 = input}
             maxLength={200}
             onChange={this.handleChange.bind(this, 'resumeInputEduDesc1')}
-            type="text" placeholder="Your First Education Description"/>
+            type="text" placeholder="First School Description"/>
 
             <input ref={(input) => this.eduschool2 = input}
             maxLength={25}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputEduSchool2')}
-            type="text" placeholder="Your Second Education School"/>
+            type="text" placeholder="Second School"/>
 
             <input ref={(input) => this.edudate2 = input}
             maxLength={15}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputEduDate2')}
-            type="text" placeholder="Your Second Education Date"/>
+            type="text" placeholder="Second School Date"/>
 
             <textarea ref={(input) => this.edudesc2 = input}
             maxLength={200}
             onChange={this.handleChange.bind(this, 'resumeInputEduDesc2')}
-            type="text" placeholder="Your Second Education Description"/>
+            type="text" placeholder="Second School Description"/>
 
             <input ref={(input) => this.projectname1 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputProjectName1')}
-            type="text" placeholder="Your First Project Name"/>
-
-            <input ref={(input) => this.projectdesc1 = input}
-            maxLength={90}
-            onChange={this.handleChange.bind(this, 'resumeInputProjectDesc1')}
-            type="text" placeholder="Your First Project Description"/>
+            type="text" placeholder="First Project Name"/>
 
             <input ref={(input) => this.projectlink1 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputProjectLink1')}
-            type="text" placeholder="Your First Project Link"/>
+            type="text" placeholder="First Project Link"/>
+
+            <textarea ref={(input) => this.projectdesc1 = input}
+            maxLength={90}
+            onChange={this.handleChange.bind(this, 'resumeInputProjectDesc1')}
+            type="text" placeholder="First Project Description"/>
 
             <input ref={(input) => this.projectname2 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputProjectName2')}
-            type="text" placeholder="Your Second Project Name"/>
-
-            <input ref={(input) => this.projectdesc2 = input}
-            maxLength={90}
-            onChange={this.handleChange.bind(this, 'resumeInputProjectDesc2')}
-            type="text" placeholder="Your Second Project Description"/>
+            type="text" placeholder="Second Project Name"/>
 
             <input ref={(input) => this.projectlink2 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputProjectLink2')}
-            type="text" placeholder="Your Second Project Link"/>
+            type="text" placeholder="Second Project Link"/>
+
+            <textarea ref={(input) => this.projectdesc2 = input}
+            maxLength={90}
+            onChange={this.handleChange.bind(this, 'resumeInputProjectDesc2')}
+            type="text" placeholder="Second Project Description"/>
 
             <input ref={(input) => this.projectname3 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputProjectName3')}
-            type="text" placeholder="Your Third Project Name"/>
-
-            <input ref={(input) => this.projectdesc3 = input}
-            maxLength={90}
-            onChange={this.handleChange.bind(this, 'resumeInputProjectDesc3')}
-            type="text" placeholder="Your Third Project Description"/>
+            type="text" placeholder="Third Project Name"/>
 
             <input ref={(input) => this.projectlink3 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputProjectLink3')}
-            type="text" placeholder="Your Third Project Link"/>
+            type="text" placeholder="Third Project Link"/>
+
+            <textarea ref={(input) => this.projectdesc3 = input}
+            maxLength={90}
+            onChange={this.handleChange.bind(this, 'resumeInputProjectDesc3')}
+            type="text" placeholder="Third Project Description"/>
 
             <input ref={(input) => this.hobbyname1 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputHobbyName1')}
-            type="text" placeholder="Your First Hobby Name"/>
-
-            <input ref={(input) => this.hobbydesc1 = input}
-            maxLength={65}
-            onChange={this.handleChange.bind(this, 'resumeInputHobbyDesc1')}
-            type="text" placeholder="Your First Hobby Description"/>
+            type="text" placeholder="First Hobby Name"/>
 
             <input ref={(input) => this.hobbyname2 = input}
             maxLength={20}
+            className="short"
             onChange={this.handleChange.bind(this, 'resumeInputHobbyName2')}
-            type="text" placeholder="Your Second Hobby Name"/>
+            type="text" placeholder="Second Hobby Name"/>
 
-            <input ref={(input) => this.hobbydesc2 = input}
+            <textarea ref={(input) => this.hobbydesc1 = input}
             maxLength={65}
+            className="fat"
+            onChange={this.handleChange.bind(this, 'resumeInputHobbyDesc1')}
+            type="text" placeholder="First Hobby Description"/>
+
+            <textarea ref={(input) => this.hobbydesc2 = input}
+            maxLength={65}
+            className="fat"
             onChange={this.handleChange.bind(this, 'resumeInputHobbyDesc2')}
-            type="text" placeholder="Your Second Hobby Description"/>
+            type="text" placeholder="Second Hobby Description"/>
 
             <br/>
+
+            <h3 className="stack">Click on the checkbox if the language/library if part of your stack! (Maximum:8)</h3>
 
             <div className="logoDiv">
             <input ref={(input) => this.logo1 = input}
@@ -325,7 +384,7 @@ class ProgrammerForm extends React.Component {
             onChange={this.handleChange.bind(this, 'resumeInputLogo4')} type="checkbox" className="checkbox" value="http://i.imgur.com/6D2cawn.png"/><h2 className="logoName"> HTML5</h2>
 
             <input ref={(input) => this.logo5 = input}
-            onChange={this.handleChange.bind(this, 'resumeInputLogo5')} type="checkbox" className="checkbox" value="http://i.imgur.com/xuaI05C.png"/><h2 className="logoName"> CSS3</h2>
+            onChange={this.handleChange.bind(this, 'resumeInputLogo5')} type="checkbox" className="checkbox" value="http://i.imgur.com/qgI92SC.png"/><h2 className="logoName"> CSS3</h2>
 
             <br/>
 
@@ -340,11 +399,31 @@ class ProgrammerForm extends React.Component {
 
             <input ref={(input) => this.logo9 = input}
             onChange={this.handleChange.bind(this, 'resumeInputLogo9')} type="checkbox" className="checkbox" value="http://i.imgur.com/nFEuQmf.png"/><h2 className="logoName"> SQL </h2>
-            </div>
+
+            <input ref={(input) => this.logo10 = input}
+            onChange={this.handleChange.bind(this, 'resumeInputLogo10')} type="checkbox" className="checkbox" value="http://i.imgur.com/nGJblsQ.png"/><h2 className="logoName"> Java </h2>
 
             <br/>
+
+            <input ref={(input) => this.logo11 = input}
+            onChange={this.handleChange.bind(this, 'resumeInputLogo11')} type="checkbox" className="checkbox" value="http://i.imgur.com/hSorHae.png"/><h2 className="logoName"> C++ </h2>
+
+            <input ref={(input) => this.logo12 = input}
+            onChange={this.handleChange.bind(this, 'resumeInputLogo12')} type="checkbox" className="checkbox" value="http://i.imgur.com/t8ivmGy.png"/><h2 className="logoName"> C# </h2>
+
+            <input ref={(input) => this.logo13 = input}
+            onChange={this.handleChange.bind(this, 'resumeInputLogo13')} type="checkbox" className="checkbox" value="http://i.imgur.com/wlDDHu6.png"/><h2 className="logoName"> Firebase </h2>
+
+            <input ref={(input) => this.logo14 = input}
+            onChange={this.handleChange.bind(this, 'resumeInputLogo14')} type="checkbox" className="checkbox" value="http://i.imgur.com/X3ulgaE.png"/><h2 className="logoName"> Python </h2>
+
+
+            </div>
+
+
+
             <br/>
-            <button type="submit">Submit Resume</button>
+            <button type="submit" className="saveResume">Save Resume</button>
             </form>
           </div>
 
@@ -394,6 +473,11 @@ class ProgrammerForm extends React.Component {
             logo7={this.state.resumeInputLogo7}
             logo8={this.state.resumeInputLogo8}
             logo9={this.state.resumeInputLogo9}
+            logo10={this.state.resumeInputLogo10}
+            logo11={this.state.resumeInputLogo11}
+            logo12={this.state.resumeInputLogo12}
+            logo13={this.state.resumeInputLogo13}
+            logo14={this.state.resumeInputLogo14}
             />
           </div>
         </div>

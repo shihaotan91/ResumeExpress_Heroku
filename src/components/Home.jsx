@@ -8,6 +8,7 @@ class Home extends React.Component {
   super();
   // this.goToResume = this.goToResume.bind(this);
   this.goToProgrammerResume = this.goToProgrammerResume.bind(this);
+  this.goToConstruct = this.goToConstruct.bind(this);
 }
 
   // goToResume(event) {
@@ -21,6 +22,11 @@ class Home extends React.Component {
     this.context.router.transitionTo(`/${this.props.params.username}/programmer`  )
     }
 
+    goToConstruct() {
+    this.context.router.transitionTo(`/${this.props.params.username}/construct/`
+      )
+    }
+
   render() {
     return (
       <div className="Home">
@@ -30,7 +36,9 @@ class Home extends React.Component {
         <img className="programLogo" src="http://i.imgur.com/n5oyQey.png"/>
         </a>
         <h3 className="or">or</h3>
+        <a onClick={this.goToConstruct}>
         <img className="designLogo" src="http://i.imgur.com/6uASbC1.png"/>
+        </a>
         <h5 className="shy">Don't be shy. Click on it.</h5>
       </div>
     );

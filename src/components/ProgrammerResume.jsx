@@ -1,9 +1,14 @@
 import React from 'react';
 import '../css/ProgrammerResume.css';
 
-import Buttons from './Buttons.jsx'
+// import Buttons from './Buttons.jsx'
 
-// import {xepOnline, Formatter} from 'css-to-pdf'
+// import {xepOnline, Formatter} from 'css-to-pdf/js/xepOnline.jqPlugin.js'
+
+import cssToPdf from 'css-to-pdf'
+
+import {xepOnline, Formatter} from 'css-to-pdf'
+
 import $ from 'jquery'
 
 import Programmer from './Programmer.jsx'
@@ -13,21 +18,32 @@ class ProgrammerResume extends React.Component {
   constructor() {
     super()
 
-    // window.onload = function() {
-    // if (window.xepOnline) {
-    //     // jQuery is loaded
-    //     alert("Yeah!");
-    // } else {
-    //     // jQuery is not loaded
-    //     alert("Doesn't Work");
-    //   }
-    // }
-    // this.printPdf = this.printPdf.bind(this);
+    window.onload = function() {
+    if (window.jQuery) {
+        // jQuery is loaded
+        // alert("Yeah!");
+    } else {
+        // jQuery is not loaded
+        // alert("Doesn't Work");
+      }
+    }
+    this.printPdf = this.printPdf.bind(this);
+    this.goToHome = this.goToHome.bind(this);
+    this.failAlert = this.failAlert.bind(this)
   }
 
-  // printPdf() {
-  //   return (xepOnline.Formatter.Format('ResumeTemplate', {pageWidth:'216mm', pageHeight:'279mm', render:'download'}))
-  // }
+  goToHome() {
+    this.context.router.transitionTo(`/`)
+  }
+
+  printPdf() {
+    return (xepOnline.Formatter.Format('ResumeTemplate', {pageWidth:'216mm', pageHeight:'279mm', render:'download'}))
+  }
+
+  failAlert() {
+    alert ("Sorry but this feature is still under construction!")
+  }
+
 
   render() {
 
@@ -44,7 +60,7 @@ class ProgrammerResume extends React.Component {
           <div className="programmerTitle"><p>{details.title}</p></div>
           <div className="programmerPitch"><p>{details.pitch}</p></div>
 
-          <div className="programmerMobile"><p>{details.mobile}</p></div>
+          <div className="programmerMobile"><p>+65 {details.mobile}</p></div>
           <div className="programmerEmail"><p>{details.email}</p></div>
           <div className="programmerLinkedin"><p>{details.linkedin}</p></div>
           <div className="programmerWebsite"><p>{details.website}</p></div>
@@ -87,6 +103,11 @@ class ProgrammerResume extends React.Component {
           <img className="logo7" src={details.logo7}/>
           <img className="logo8" src={details.logo8}/>
           <img className="logo9" src={details.logo9}/>
+          <img className="logo10" src={details.logo10}/>
+          <img className="logo11" src={details.logo11}/>
+          <img className="logo12" src={details.logo12}/>
+          <img className="logo13" src={details.logo13}/>
+          <img className="logo14" src={details.logo14}/>
 
           <h6 className="programmerHobbyName1">{details.hobbyname1}</h6>
           <p className="programmerHobbyDesc1">{details.hobbydesc1}</p>
@@ -94,18 +115,22 @@ class ProgrammerResume extends React.Component {
           <h6 className="programmerHobbyName2">{details.hobbyname2}</h6>
           <p className="programmerHobbyDesc2">{details.hobbydesc2}</p>
 
-
         </div>
 
-        <Buttons/>
+        <button className="printButton" onClick={this.failAlert}>
+        Save as PDF!
+        </button>
+        <button className="homeButton" onClick={this.goToHome}>Back To Home</button>
 
       </div>
     )
   }
 }
 
-// <button onClick={this.printPdf}>
-// print
-// </button>
+
+ProgrammerResume.contextTypes = {
+  router: React.PropTypes.object
+}
+
 
 export default ProgrammerResume
