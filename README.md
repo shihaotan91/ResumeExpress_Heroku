@@ -10,6 +10,11 @@ Creating a resume from scratch is a daunting and taxing task. What if there's a 
 
 Resume Express allows users to create simple and elegant resumes with inbuilt templates just by filling up a form. Upon submission, users can view, edit or delete their resumes. Users can also save their resumes as PDF files while filling up their details.
 
+## Learning Points
+
+React require planning. Lots and lots of planning.
+Linking to firebase is easy. Retrieving information from Firebase is hard.
+
 ## What's next?
 
 Include a Thesarus API so users can better express themselves.
